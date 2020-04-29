@@ -18,3 +18,30 @@ void ItemDatabase::addItem(const Item& newItem)
 	itemPtr[used] = newItem;
 	used++;
 }
+
+void ItemDatabase::printall() const
+{
+	for (int i = 0; i < used; i++)
+		itemPtr[i].getitemName();
+}
+
+void ItemDatabase::editItemsAt(int index)
+{
+
+}
+
+Item ItemDatabase::getItem(int index) const
+{
+	return itemPtr[index];
+}
+
+void ItemDatabase::make_bigger()
+{
+	Item* temp;
+	temp = new Item[capacity * 2];
+	for (int i = 0; i < used; i++)
+		temp[i] = itemPtr[i];
+	delete[] itemPtr;
+	itemPtr = temp;
+	capacity *= 2;
+}
