@@ -28,11 +28,97 @@ void ItemDatabase::printall() const
 void ItemDatabase::editItemsAt(int index)
 {
 
+
+	cout << "What would you want to edit?" << endl;
+	cout << " 1. Item Name" << endl;
+	cout << " 2. Item Description" << endl;
+	cout << " 3. Item Price" << endl;
+	cout << " 4. Item Stock" << endl;
+	cout << " Press 8 to exit" << endl;
+
+
+	int choice, intEdit = 0;
+	double doubleEdit = 0.0;
+	string stringEdit;
+
+	cout << "\nEnter your choice: ";
+	cin >> choice;
+	cout << endl;
+
+	while (choice != 8)
+	{
+		switch (choice)
+		{
+		case 1:
+			cout << "Enter new Title" << endl;
+			cin.ignore(1, ' ');
+			getline(cin, stringEdit);
+			itemPtr[index].setItemName(stringEdit);
+
+			break;
+
+		case 2:
+			cout << "Enter new Item Description" << endl;
+			cin.ignore(1, ' ');
+			getline(cin, stringEdit);
+			itemPtr[index].setItemDescription(stringEdit);
+
+			break;
+
+		case 3:
+			cout << "Enter new price" << endl;
+			cin >> doubleEdit;
+			itemPtr[index].setItemPrice(doubleEdit);
+
+			break;
+		case 4:
+			cout << "Enter new Item Stock" << endl;
+			cin >> intEdit;
+			itemPtr[index].setItemStock(intEdit);
+
+			break;
+
+		default:
+			cout << "Invalid Selection" << endl;
+			while (cin.fail())
+			{
+				cout << "Please enter only numeric values. " << endl;
+				cin.clear();
+				cin.ignore(999, '\n');
+			}
+			break;
+		}
+
+		cout << endl;
+		system("Pause");
+		cout << endl;
+		cout << "What would you want to edit?" << endl;
+		cout << " 1. Title" << endl;
+		cout << " 2. BookID" << endl;
+		cout << " 3. Author" << endl;
+		cout << " 4. Publisher" << endl;
+		cout << " 5. Publication Date" << endl;
+		cout << " 6. Edition" << endl;
+		cout << " 7. Cost" << endl;
+		cout << "\nEnter your choice: ";
+		cin >> choice;
+		cout << endl;
+	}
 }
 
 Item ItemDatabase::getItem(int index) const
 {
 	return itemPtr[index];
+}
+
+void ItemDatabase::printItemList() const
+{
+	for (int i = 0; i < used; i++)
+		cout << i + 1 << ". " << itemPtr[i].getitemName() << " " << itemPtr[i].getItemPrice << endl;
+}
+
+ItemDatabase::~ItemDatabase()
+{
 }
 
 void ItemDatabase::make_bigger()
