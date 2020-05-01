@@ -70,40 +70,43 @@ void processGuestChoice(int choice, int userLevel, ItemDatabase& Database)
 
 void processUserChoice(int choice, int userLevel, ItemDatabase& Database)
 {
-	while (choice != 7)
+	int intchoice;
+
+	cout << "\nEnter your choice: ";
+	cin >> choice;
+	cout << endl;
+
+	switch (choice)
 	{
-		cout << "\nEnter your choice: ";
-		cin >> choice;
-		cout << endl;
+	case 1:
 
-		switch (choice)
+		break;
+	case 2:
+
+		break;
+
+	case 3:
+
+		break;
+
+	case 4:
+
+		break;
+
+	case -1:
+
+		break;
+
+	default:
+		cout << "Invalid Selection" << endl;
+
+		while (cin.fail())
 		{
-		case 1:
-
-			break;
-		case 2:
-
-			break;
-
-		case 3:
-
-			break;
-
-		case 4:
-
-			break;
-		default:
-			cout << "Invalid Selection" << endl;
-
-			while (cin.fail())
-			{
-				cout << "Please enter only numeric values. " << endl;
-				cin.clear();
-				cin.ignore(999, '\n');
-			}
-			break;
+			cout << "Please enter only numeric values. " << endl;
+			cin.clear();
+			cin.ignore(999, '\n');
 		}
-
+		break;
 
 	}
 }
@@ -111,42 +114,52 @@ void processUserChoice(int choice, int userLevel, ItemDatabase& Database)
 
 void processAdminChoice(int choice, int userLevel, ItemDatabase& Database)
 {
-	while (choice != 7)
+	int intChoice, intEdit;
+
+	switch (choice)
 	{
-		cout << "\nEnter your choice: ";
-		cin >> choice;
-		cout << endl;
+	case 1:
+		cout << "Search an item" << endl;
+		Database.printItemList();
+		cout << "Select an Item to view more info.  " << endl;
+		cin >> intChoice;
+		Database.getItem(intChoice - 1).printItemInfo();
 
-		switch (choice)
+		break;
+	case 2:
+
+		break;
+
+	case 3:
+
+		break;
+
+	case 4:
+
+		break;
+
+	case 7:
+		Database.printItemList();
+		cout << "Enter index to edit? ";
+		cin >> intEdit;
+		Database.editItemsAt(intEdit - 1);
+
+		break;
+	case -1:
+
+		break;
+
+	default:
+		cout << "Invalid Selection" << endl;
+
+		while (cin.fail())
 		{
-		case 1:
-
-			break;
-		case 2:
-
-			break;
-
-		case 3:
-
-			break;
-
-		case 4:
-
-			break;
-		default:
-			cout << "Invalid Selection" << endl;
-
-			while (cin.fail())
-			{
-				cout << "Please enter only numeric values. " << endl;
-				cin.clear();
-				cin.ignore(999, '\n');
-			}
-			break;
+			cout << "Please enter only numeric values. " << endl;
+			cin.clear();
+			cin.ignore(999, '\n');
 		}
-
-		choice = 0;
-
-
+		break;
 	}
+
+	choice = 0;
 }

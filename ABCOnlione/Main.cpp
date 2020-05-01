@@ -11,11 +11,10 @@ using namespace std;
 
 int main()
 {
-	static int userLevel = 2;
+	static int userLevel = 0;
 	int choice = 0;
 	ItemDatabase Database;
 	readItemData(Database);
-	int* p = &userLevel;
 
 	while (choice != -1)
 	{
@@ -24,7 +23,7 @@ int main()
 		cout << "\nEnter your choice: ";
 		cin >> choice;
 		cout << endl;
-		processChoice(choice, *p, Database);
+		processChoice(choice, userLevel, Database);
 
 		cout << endl;
 		system("pause");

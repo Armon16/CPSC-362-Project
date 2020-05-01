@@ -79,6 +79,9 @@ void ItemDatabase::editItemsAt(int index)
 
 			break;
 
+		case 8:
+			break;
+
 		default:
 			cout << "Invalid Selection" << endl;
 			while (cin.fail())
@@ -94,14 +97,12 @@ void ItemDatabase::editItemsAt(int index)
 		system("Pause");
 		cout << endl;
 		cout << "What would you want to edit?" << endl;
-		cout << " 1. Title" << endl;
-		cout << " 2. BookID" << endl;
-		cout << " 3. Author" << endl;
-		cout << " 4. Publisher" << endl;
-		cout << " 5. Publication Date" << endl;
-		cout << " 6. Edition" << endl;
-		cout << " 7. Cost" << endl;
-		cout << "\nEnter your choice: ";
+		cout << " 1. Item Name" << endl;
+		cout << " 2. Item Description" << endl;
+		cout << " 3. Item Price" << endl;
+		cout << " 4. Item Stock" << endl;
+		cout << " Press 8 to exit" << endl;
+		cout << " Enter your choice " << endl;
 		cin >> choice;
 		cout << endl;
 	}

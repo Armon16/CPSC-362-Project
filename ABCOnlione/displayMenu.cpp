@@ -23,12 +23,12 @@ void displayAdminMenu()
 	cout << "    1: Search for an item" << endl;
 	cout << "    2: View Cart" << endl;
 	cout << "    3: View Orders" << endl;
-	cout << "    3: Edit Payment" << endl;
-	cout << "    3: Edit Address" << endl;
-	cout << "    3: Checkout" << endl;
-	cout << "    3: Modify Inventory" << endl;
-	cout << "    3: View Accounts" << endl;
-	cout << "    6: Sign Out" << endl;
+	cout << "    4: Edit Payment" << endl;
+	cout << "    5: Edit Address" << endl;
+	cout << "    6: Checkout" << endl;
+	cout << "    7: Modify Inventory" << endl;
+	cout << "    8: View Accounts" << endl;
+	cout << "    9: Sign Out" << endl;
 	cout << "    -1: Exit" << endl;
 }
 
