@@ -22,7 +22,7 @@ void ItemDatabase::addItem(const Item& newItem)
 void ItemDatabase::printall() const
 {
 	for (int i = 0; i < used; i++)
-		itemPtr[i].getitemName();
+		cout << itemPtr[i].getitemName() << endl;
 }
 
 void ItemDatabase::editItemsAt(int index)
@@ -35,6 +35,7 @@ void ItemDatabase::editItemsAt(int index)
 	cout << " 3. Item Price" << endl;
 	cout << " 4. Item Stock" << endl;
 	cout << " Press 8 to exit" << endl;
+	cout << " Enter your choice "<< endl;
 
 
 	int choice, intEdit = 0;
@@ -114,7 +115,7 @@ Item ItemDatabase::getItem(int index) const
 void ItemDatabase::printItemList() const
 {
 	for (int i = 0; i < used; i++)
-		cout << i + 1 << ". " << itemPtr[i].getitemName() << " " << itemPtr[i].getItemPrice << endl;
+		cout << i + 1 << ". " << itemPtr[i].getitemName() << " " << itemPtr[i].getItemPrice()<< endl;
 }
 
 ItemDatabase::~ItemDatabase()

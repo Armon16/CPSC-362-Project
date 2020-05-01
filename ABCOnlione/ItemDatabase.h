@@ -1,3 +1,11 @@
+/**
+a) Module name: Item Database
+b) Date of the code: 4/19/19
+c) Programmer's name: Armin Rahimi
+d) Displays a menu based on user's level
+e)  n/a
+f)  n/a
+*/
 #ifndef ITEMDATABASE_H
 #define ITEMDATABASE_H
 

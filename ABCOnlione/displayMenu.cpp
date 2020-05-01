@@ -29,7 +29,7 @@ void displayAdminMenu()
 	cout << "    3: Modify Inventory" << endl;
 	cout << "    3: View Accounts" << endl;
 	cout << "    6: Sign Out" << endl;
-	cout << "    7: Exit" << endl;
+	cout << "    -1: Exit" << endl;
 }
 
 void displayGuestMenu()
@@ -39,7 +39,7 @@ void displayGuestMenu()
 	cout << "    1: Search for an item" << endl;
 	cout << "    2: View Cart" << endl;
 	cout << "    6: Sign In" << endl;
-	cout << "    7: Exit" << endl;
+	cout << "   -1: Exit "<< endl;
 }
 
 void displayUserMenu()
@@ -53,5 +53,5 @@ void displayUserMenu()
 	cout << "    3: Edit Address" << endl;
 	cout << "    3: Checkout" << endl;
 	cout << "    6: Sign Out" << endl;
-	cout << "    7: Exit" << endl;
+	cout << "    -1: Exit" << endl;
 }

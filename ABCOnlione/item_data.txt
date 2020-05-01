@@ -1,0 +1,58 @@
+A12231 Harry Potter and The Sorcerer's Stone
+A book by JKROWLING about a wizard
+29.99 3
+
+B12231 Laptop Computer
+Big i7 Core processor with 1 GB RAM
+299.99 3
+
+B12232 Gaming Laptop
+I7 Processor with 16 GB Ram and 900 GB Storage
+1799.99 5
+
+C23342 Gaming Computer
+Big Tower PC with RTX 2080 TI x2 and 3 TB Storage
+3500.49 1
+
+D54646 Video Game1
+An RPG Game
+28.99 25
+
+D54641 Video Game2
+A Sport Game
+28.99 22
+
+D54644 Video Game3
+A Fighting Game
+29.99 25
+
+
+D54143 Video Game4
+A RPG Game
+59.99 29
+
+D54623 Video Game5
+A Shooting Game
+15.99 10
+
+S32482 Bag of Chips
+Crunchy Goodness 
+1.99 350
+
+Z2313 Hand Sanitizer
+Kills Coronavirus for sure
+2.99 1
+
+A23892 A big stick
+Use this for poking things
+0.99 24
+
+F38942 Ramen Noodles
+Food for the poor college student
+0.30 400
+
+C223541 Strong Paper
+Better Paper for important writing
+1.50 20
+
+END

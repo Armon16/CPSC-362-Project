@@ -3,13 +3,19 @@
 
 #include "displayMenu.h"
 #include "processChoice.h"
+#include "ItemDatabase.h"
+#include "Item.h"
+#include "InputHandler.h"
 
 using namespace std;
 
 int main()
 {
-	int userLevel = 2;
+	static int userLevel = 2;
 	int choice = 0;
+	ItemDatabase Database;
+	readItemData(Database);
+	int* p = &userLevel;
 
 	while (choice != -1)
 	{
@@ -18,7 +24,7 @@ int main()
 		cout << "\nEnter your choice: ";
 		cin >> choice;
 		cout << endl;
-		processChoice(choice, userLevel);
+		processChoice(choice, *p, Database);
 
 		cout << endl;
 		system("pause");

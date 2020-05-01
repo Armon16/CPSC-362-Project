@@ -5,33 +5,46 @@
 
 using namespace std;
 
-void processGuestChoice(int choice);
-void processUserChoice(int choice);
-void processAdminChoice(int choice);
+void processGuestChoice(int choice, int userLevel, ItemDatabase& Database);
+void processUserChoice(int choice, int userLevel, ItemDatabase& Database);
+void processAdminChoice(int choice, int userLevel, ItemDatabase& Database);
 
-void processChoice(int choice, int userLevel)
+void processChoice(int choice, int userLevel,ItemDatabase& Database)
 {
+
 	if (userLevel == 0)
-		processAdminChoice(choice);
+		processAdminChoice(choice, userLevel, Database);
 	else if (userLevel == 1)
-		processUserChoice(choice);
+		processUserChoice(choice, userLevel, Database);
 	else
-		processGuestChoice(choice);
+		processGuestChoice(choice, userLevel, Database);
 }
 
-void processGuestChoice(int choice)
+/**
+	cout << "    1: Search for an item" << endl;
+	cout << "    2: View Cart" << endl;
+	cout << "    6: Sign In" << endl;
+	cout << "    7: Exit" << endl;
+*/
+void processGuestChoice(int choice, int userLevel, ItemDatabase& Database)
 {
+	int intChoice;
 	switch (choice)
 	{
 	case 1:
 		cout << "Search an item" << endl;
+		Database.printItemList();
+		cout << "Select an Item to view more info.  " << endl;
+		cin >> intChoice;
+		Database.getItem(intChoice-1).printItemInfo();
 
 		break;
 	case 2:
 
 		break;
 
-	case 3:
+	case 6:
+		userLevel--;
 
 		break;
 
@@ -39,6 +52,9 @@ void processGuestChoice(int choice)
 
 		break;
 
+	case -1:
+
+		break;
 	default:
 		cout << "Invalid Selection" << endl;
 
@@ -52,7 +68,7 @@ void processGuestChoice(int choice)
 	}
 }
 
-void processUserChoice(int choice)
+void processUserChoice(int choice, int userLevel, ItemDatabase& Database)
 {
 	while (choice != 7)
 	{
@@ -93,7 +109,7 @@ void processUserChoice(int choice)
 }
 
 
-void processAdminChoice(int choice)
+void processAdminChoice(int choice, int userLevel, ItemDatabase& Database)
 {
 	while (choice != 7)
 	{
